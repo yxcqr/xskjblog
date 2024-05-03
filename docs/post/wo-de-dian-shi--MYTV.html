@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html data-color-mode="light" data-dark-theme="dark" data-light-theme="light" lang="zh-CN">
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="//cdn.staticfile.net/Primer/21.0.7/primer.css" rel="stylesheet" />
+    <link rel="icon" href="https://github.githubassets.com/favicons/favicon.svg"><script>
+        let theme = localStorage.getItem("meek_theme") || "light";
+        document.documentElement.setAttribute("data-color-mode", theme);
+    </script>
+<meta name="description" content="我的电视-MYTV">
+<title>我的电视-MYTV</title>
+
+
+</head>
+<style>
+body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;padding: 45px;font-size: 16px;font-family: sans-serif;line-height: 1.25;}
+#header{display:flex;padding-bottom:8px;border-bottom: 1px solid var(--borderColor-muted, var(--color-border-muted));margin-bottom: 16px;}
+#footer {margin-top:64px; text-align: center;font-size: small;}
+
+</style>
+
+<style>
+.postTitle{margin: auto 0;font-size:40px;font-weight:bold;}
+.title-right{display:flex;margin:auto 0 0 auto;}
+.title-right .circle{padding: 14px 16px;margin-right:8px;}
+#postBody{border-bottom: 1px solid var(--color-border-default);padding-bottom:36px;}
+#postBody hr{height:2px;}
+#cmButton{height:48px;margin-top:48px;}
+#comments{margin-top:64px;}
+.g-emoji{font-size:24px;}
+@media (max-width: 600px) {
+    body {padding: 8px;}
+    .postTitle{font-size:24px;}
+}
+</style>
+
+
+
+
+<body>
+    <div id="header">
+<h1 class="postTitle">我的电视-MYTV</h1>
+<div class="title-right">
+    <a href="https://yxcqr.github.io/xskjblog" id="buttonHome" class="btn btn-invisible circle" title="首页">
+        <svg class="octicon" width="16" height="16">
+            <path id="pathHome" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+    
+    <a href="https://github.com/yxcqr/xskjblog/issues/1" target="_blank" class="btn btn-invisible circle" title="Issue">
+        <svg class="octicon" width="16" height="16">
+            <path id="pathIssue" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+    
+
+    <a class="btn btn-invisible circle" onclick="modeSwitch();" title="切换主题">
+        <svg class="octicon" width="16" height="16" >
+            <path id="themeSwitch" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+
+</div>
+</div>
+    <div id="content">
+<div class="markdown-body" id="postBody"><p><a target="_blank" rel="noopener noreferrer" href="https://github.com/yxcqr/xsblog/assets/28244699/43f7714d-24cd-4232-92a6-371c1e27f229"><img src="https://github.com/yxcqr/xsblog/assets/28244699/43f7714d-24cd-4232-92a6-371c1e27f229" alt="img_1_看图王" style="max-width: 100%;"></a><br>
+一款免费的无广无购物的电视直播，主要看央视和卫视，极其流畅。<br>
+<a target="_blank" rel="noopener noreferrer" href="https://github.com/yxcqr/xsblog/assets/28244699/34193722-90e1-4486-9c7f-297df0a49c74"><img src="https://github.com/yxcqr/xsblog/assets/28244699/34193722-90e1-4486-9c7f-297df0a49c74" alt="img_2_看图王" style="max-width: 100%;"></a><br>
+潇洒从开始用起，到现在各方面都还可以，特别是加载速度极快，看了下安装包，是内置的直播源，春节看看晚会还是很不错的。<br>
+<a target="_blank" rel="noopener noreferrer" href="https://github.com/yxcqr/xsblog/assets/28244699/d815145c-f348-4dac-8087-203de0668a5f"><img src="https://github.com/yxcqr/xsblog/assets/28244699/d815145c-f348-4dac-8087-203de0668a5f" alt="img_3_看图王" style="max-width: 100%;"></a><br>
+更新日志</p>
+<ul>
+<li>v1.7.8（通用）</li>
+<li>修复播放过程中的卡顿问题</li>
+<li>增加时间显示</li>
+<li>频道号优化</li>
+<li>遥控器左键打开频道列表</li>
+<li>遥控器右键打开设置菜单</li>
+<li>频道列表空白处点击隐藏频道列表</li>
+<li>v1.7.6（通用）</li>
+<li>临时去掉部分频道，提高频道的可用性</li>
+<li>部分频道增加节目单</li>
+<li>v1.7.5（安卓5及以上专用）</li>
+<li>修复播放过程中的卡顿问题</li>
+<li>增加时间显示</li>
+<li>频道号优化</li>
+<li>设置中增加退出按钮</li>
+<li>v1.7.4（通用）</li>
+<li>修复368</li>
+<li>v1.7.3（安卓5及以上专用）</li>
+<li>临时去掉部分频道，提高频道的可用性</li>
+<li>部分频道增加节目单</li>
+<li>遥控器左键进入节目列表</li>
+<li>遥控器右键进入菜单</li>
+<li>v1.7.2（通用）</li>
+<li>支持节目列表网格样式和行样式切换，软件重启后生效</li>
+<li>节目列表样式变更</li>
+<li>v1.7.1（安卓5及以上专用）</li>
+<li>解决设置页更新闪退的问题</li>
+<li>凤凰卫视回归</li>
+<li>解决368问题</li>
+<li>v1.7.0（通用）</li>
+<li>网络请求优化</li>
+<li>v1.6.9（安卓5及以上专用）</li>
+<li>去掉港澳台和国际频道</li>
+<li>解决部分情况下3、6、8等频道无法播放的问题</li>
+<li>解决部分情况下启动后黑屏问题</li>
+<li>v1.6.8（通用）</li>
+<li>修复部分设备崩溃的问题</li>
+<li>修复部分设备凤凰卫视无法播放的问题</li>
+<li>v1.6.7（安卓5及以上专用）</li>
+<li>手机双击打开配置</li>
+<li>自动更新</li>
+<li>v1.6.6（通用）</li>
+<li>更新重庆卫视图标</li>
+<li>凤凰卫视增强画质</li>
+<li>凤凰卫视增加EPG</li>
+<li>v1.6.5（安卓5及以上专用）</li>
+<li>增加CETV1图标</li>
+<li>稳定性提升</li>
+<li>v1.6.4（通用）</li>
+<li>增加CETV1</li>
+<li>增加凤凰卫视</li>
+<li>默认关闭开机启动</li>
+<li>v1.6.3（安卓5及以上专用）</li>
+<li>增加CETV1</li>
+<li>凤凰卫视增强画质</li>
+<li>默认关闭开机启动</li>
+<li>延迟菜单自动关闭时间</li>
+<li>解决一些可能导致首次打开时黑屏的问题</li>
+<li>v1.6.2（通用）</li>
+<li>修复按键无效的问题</li>
+<li>新的频道列表样式</li>
+<li>v1.6.1（安卓5及以上专用）</li>
+<li>增加凤凰卫视</li>
+<li>v1.6.0（通用）</li>
+<li>通用（春晚緊急修復）</li>
+<li>v1.5.9（安卓5及以上专用）</li>
+<li>解决天猫魔盒闪退问题</li>
+<li>v1.5.8（通用）</li>
+<li>修复央视6画质差的问题</li>
+<li>增加兵团卫视</li>
+<li>播放失败重试</li>
+<li>v1.5.7（安卓5及以上专用）</li>
+<li>修复播放失败的问题</li>
+<li>v1.5.6（通用）</li>
+<li>解决部分设备系统时间不对导致播放失败的问题</li>
+<li>v1.5.5（安卓5及以上专用）</li>
+<li>修复播放失败的问题</li>
+<li>修复APP恢复后频道号、频道列表不自动消失的问题</li>
+<li>v1.5.4（通用）</li>
+<li>修复播放失败的问题</li>
+<li>以下已不可用</li>
+<li>v1.5.3（安卓5及以上专用）</li>
+<li>修复部分情况下APP切换后无法继续播放的问题</li>
+<li>优化重试逻辑</li>
+<li>v1.5.2（通用）</li>
+<li>修复APP恢复后频道号、频道列表不自动消失的问题</li>
+<li>v1.5.1（安卓5及以上专用）</li>
+<li>性能优化</li>
+<li>v1.5.0（通用）</li>
+<li>修复部分情况下APP切换后无法继续播放的问题</li>
+<li>v1.4.9（安卓5及以上专用）</li>
+<li>同步v1.4.8</li>
+<li>v1.4.8（通用）</li>
+<li>频道号从1开始，CCTV5+为18</li>
+<li>提高CCTV6清晰度</li>
+<li>增加天津卫视、新疆卫视</li>
+<li>v1.4.7（安卓5及以上专用）</li>
+<li>修复部分用户CCTV13播放过程中卡住的问题</li>
+<li>调整CCTV的频道顺序</li>
+<li>v1.4.6（通用）</li>
+<li>10以下频道不再需要先按0</li>
+<li>v1.4.5（安卓5及以上专用）</li>
+<li>数字选台配置</li>
+<li>v1.4.4（通用）</li>
+<li>优化图标显示</li>
+<li>增加换台反转</li>
+<li>v1.4.3（安卓5及以上专用）</li>
+<li>支持频道反转配置</li>
+<li>v1.4.2（通用）</li>
+<li>支持安卓4</li>
+<li>v1.4.1</li>
+<li>解决部分用户无法打开菜单的问题</li>
+<li>v1.4.0</li>
+<li>解决极个别高版本机型黑屏问题</li>
+<li>v1.3.9</li>
+<li>提高稳定性</li>
+<li>提高连接速度</li>
+<li>v1.3.4</li>
+<li>部分错误会提示用户</li>
+<li>菜单3秒钟后自动关闭</li>
+<li>v1.3.3</li>
+<li>部分错误会提示用户</li>
+<li>菜单3秒钟后自动关闭</li>
+<li>v1.3.2</li>
+<li>增加重试，减少因网络问题导致的播放失败</li>
+<li>优化横幅banner</li>
+<li>v1.3.1</li>
+<li>增加CCTV 8K 超高清频道</li>
+<li>增加国际频道栏目</li>
+<li>v1.3.0</li>
+<li>处理368可能失败的情形</li>
+<li>v1.2.9</li>
+<li>支持3、6、8</li>
+<li>v1.2.8</li>
+<li>兼容16:10等分辨率</li>
+<li>v1.2.7</li>
+<li>此版本是为了测试安卓6.0以下版本，如之前可以正常运行，请勿安装。</li>
+<li>v1.2.6</li>
+<li>支持安卓4.2</li>
+<li>解决部分频道无法播放的问题</li>
+<li>修复切换时有时没有恢复播放的问题</li>
+<li>左右键不再切换源</li>
+<li>增大频道信息标题尺寸，缩小与节目信息的间隔</li>
+<li>v1.2.5</li>
+<li>美化频道信息显示</li>
+<li>优化节目单获取</li>
+<li>v1.2.4</li>
+<li>改变换台滑动方向，上一个频道下滑，下一个频道上滑</li>
+<li>软件退出时，退出播放器</li>
+<li>播放相同的频道，不再重复加载</li>
+<li>暂时移除部分频道</li>
+<li>v1.2.3</li>
+<li>固定视频比列为16:9</li>
+<li>隐藏全面屏底部的小横条</li>
+<li>移除移动专区</li>
+<li>修复一个闪退问题</li>
+<li>更换图标和应用名</li>
+<li>如电视可以启用ADB，也可以通过ADB进行安装：</li>
+</ul>
+<p>下载地址<br>
+<a href="https://wwd.lanzoul.com/b0882sfzc" rel="nofollow">https://wwd.lanzoul.com/b0882sfzc</a> 密码:ccy4</p></div>
+<div style="font-size:small;margin-top:8px;float:right;"></div>
+<button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
+<div class="comments" id="comments"></div>
+</div>
+    <div id="footer">Copyright © <span id="year"></span><a href="https://yxcqr.github.io/xskjblog"> Blog Title </a>
+<p>
+<span id="runday"></span>Powered by <a href="https://meekdai.com/Gmeek.html" target="_blank">Gmeek</a>
+</p>
+
+<script>
+if(""!=""){
+    var now=new Date();
+    var startSite=new Date("");
+    var diff=now.getTime()-startSite.getTime();
+    var diffDay=Math.floor(diff/(1000*60*60*24));
+    document.getElementById("year").innerHTML=now.getFullYear();
+    if(""!=""){document.getElementById("runday").innerHTML=" • "+"网站运行"+diffDay+"天"+" • ";}
+    else{document.getElementById("runday").innerHTML="网站运行"+diffDay+"天"+" • ";}
+}
+</script>
+</div>
+</body>
+<script>
+var IconList={'sun': 'M8 10.5a2.5 2.5 0 100-5 2.5 2.5 0 000 5zM8 12a4 4 0 100-8 4 4 0 000 8zM8 0a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0V.75A.75.75 0 018 0zm0 13a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5A.75.75 0 018 13zM2.343 2.343a.75.75 0 011.061 0l1.06 1.061a.75.75 0 01-1.06 1.06l-1.06-1.06a.75.75 0 010-1.06zm9.193 9.193a.75.75 0 011.06 0l1.061 1.06a.75.75 0 01-1.06 1.061l-1.061-1.06a.75.75 0 010-1.061zM16 8a.75.75 0 01-.75.75h-1.5a.75.75 0 010-1.5h1.5A.75.75 0 0116 8zM3 8a.75.75 0 01-.75.75H.75a.75.75 0 010-1.5h1.5A.75.75 0 013 8zm10.657-5.657a.75.75 0 010 1.061l-1.061 1.06a.75.75 0 11-1.06-1.06l1.06-1.06a.75.75 0 011.06 0zm-9.193 9.193a.75.75 0 010 1.06l-1.06 1.061a.75.75 0 11-1.061-1.06l1.06-1.061a.75.75 0 011.061 0z', 'moon': 'M9.598 1.591a.75.75 0 01.785-.175 7 7 0 11-8.967 8.967.75.75 0 01.961-.96 5.5 5.5 0 007.046-7.046.75.75 0 01.175-.786zm1.616 1.945a7 7 0 01-7.678 7.678 5.5 5.5 0 107.678-7.678z', 'sync': 'M1.705 8.005a.75.75 0 0 1 .834.656 5.5 5.5 0 0 0 9.592 2.97l-1.204-1.204a.25.25 0 0 1 .177-.427h3.646a.25.25 0 0 1 .25.25v3.646a.25.25 0 0 1-.427.177l-1.38-1.38A7.002 7.002 0 0 1 1.05 8.84a.75.75 0 0 1 .656-.834ZM8 2.5a5.487 5.487 0 0 0-4.131 1.869l1.204 1.204A.25.25 0 0 1 4.896 6H1.25A.25.25 0 0 1 1 5.75V2.104a.25.25 0 0 1 .427-.177l1.38 1.38A7.002 7.002 0 0 1 14.95 7.16a.75.75 0 0 1-1.49.178A5.5 5.5 0 0 0 8 2.5Z', 'home': 'M6.906.664a1.749 1.749 0 0 1 2.187 0l5.25 4.2c.415.332.657.835.657 1.367v7.019A1.75 1.75 0 0 1 13.25 15h-3.5a.75.75 0 0 1-.75-.75V9H7v5.25a.75.75 0 0 1-.75.75h-3.5A1.75 1.75 0 0 1 1 13.25V6.23c0-.531.242-1.034.657-1.366l5.25-4.2Zm1.25 1.171a.25.25 0 0 0-.312 0l-5.25 4.2a.25.25 0 0 0-.094.196v7.019c0 .138.112.25.25.25H5.5V8.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 .75.75v5.25h2.75a.25.25 0 0 0 .25-.25V6.23a.25.25 0 0 0-.094-.195Z', 'github': 'M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z'};
+var utterancesLoad=0;
+
+let themeSettings={
+    "dark": ["dark","moon","#00f0ff","dark-blue"],
+    "light": ["light","sun","#ff5000","github-light"],
+    "auto": ["auto","sync","","preferred-color-scheme"]
+};
+function changeTheme(mode, icon, color, utheme){
+    document.documentElement.setAttribute("data-color-mode",mode);
+    document.getElementById("themeSwitch").setAttribute("d",value=IconList[icon]);
+    document.getElementById("themeSwitch").parentNode.style.color=color;
+    if(utterancesLoad==1){utterancesTheme(utheme);}
+}
+function modeSwitch(){
+    let currentMode=document.documentElement.getAttribute('data-color-mode');
+    let newMode = currentMode === "light" ? "dark" : currentMode === "dark" ? "auto" : "light";
+    localStorage.setItem("meek_theme", newMode);
+    if(themeSettings[newMode]){
+        changeTheme(...themeSettings[newMode]);
+    }
+}
+function utterancesTheme(theme){
+    const message={type:'set-theme',theme: theme};
+    const iframe=document.getElementsByClassName('utterances-frame')[0];
+    iframe.contentWindow.postMessage(message,'https://utteranc.es');
+}
+if(themeSettings[theme]){changeTheme(...themeSettings[theme]);}
+console.log("\n %c Gmeek last https://github.com/Meekdai/Gmeek \n\n","padding:5px 0;background:#02d81d;color:#fff");
+</script>
+
+<script>
+document.getElementById("pathHome").setAttribute("d",IconList["home"]);
+document.getElementById("pathIssue").setAttribute("d",IconList["github"]);
+
+function openComments(){
+    cm=document.getElementById("comments");
+    cmButton=document.getElementById("cmButton");
+    cmButton.innerHTML="loading";
+    span=document.createElement("span");
+    span.setAttribute("class","AnimatedEllipsis");
+    cmButton.appendChild(span);
+
+    script=document.createElement("script");
+    script.setAttribute("src","https://utteranc.es/client.js");
+    script.setAttribute("repo","yxcqr/xskjblog");
+    script.setAttribute("issue-term","title");
+    
+    if(localStorage.getItem("meek_theme")=="dark"){script.setAttribute("theme","dark-blue");}
+    else if(localStorage.getItem("meek_theme")=="light") {script.setAttribute("theme","github-light");}
+    else{script.setAttribute("theme","preferred-color-scheme");}
+    
+    script.setAttribute("crossorigin","anonymous");
+    script.setAttribute("async","");
+    cm.appendChild(script);
+
+    int=self.setInterval("iFrameLoading()",200);
+}
+
+function iFrameLoading(){
+    var utterances=document.getElementsByClassName('utterances');
+    if(utterances.length==1){
+        if(utterances[0].style.height!=""){
+            utterancesLoad=1;
+            int=window.clearInterval(int);
+            document.getElementById("cmButton").style.display="none";
+            console.log("utterances Load OK");
+        }
+    }
+}
+</script>
+
+
+
+</html>
